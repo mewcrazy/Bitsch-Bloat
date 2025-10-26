@@ -5,12 +5,29 @@ For years I was annoyed by all the numerous Windows Services that kept on poppin
 
 There are various Windows Blockers like W10Privacy or O&O ShutUp which disable a lot of telemetry, background apps and tasks, but none of them are handling all the services by itself.
 
+> [!CAUTION]
+> No Revert Script is included. If any Windows functionality is broken after using the script, you have to re-enable the associated Services manually via services.msc.
+
+
 Please note that some specific functions won't be working anymore:
 - Bluetooth
 - WiFi
 - (WSL)
 
 ----
+
+- Remove unnneded devices (i.e. Monitor)
+- Disable Memory Compression
+- Disable Windows Update scheduled tasks
+- Disable Flighting Scheduled Task
+- Disable hanging "Synchronize Language Settings" Task
+- Enable/Disable Windows Updates
+- Kills open processes: CrossDeviceResume.exe, ShellExperienceHost.exe, DataExchangeHost.exe, mobsync.exe, RuntimeBroker.exe, DllHost.exe, taskhostw.exe, conhost.exe, wlrmdr.exe, SystemSettings.exe
+
+Cosmetics:
+- Explorer: Remove "Home" & "Gallery" from Quick Pane
+- Explorer: Remove duplicate drives in Explorer Quick Pane
+- Windows Fiels: Set some default folders as hidden (C:\inetpub, C:\PerfLogs, C:\Windows.old, C:\DumpStack.log)
 
 Currently the script is setting **4 Windows Services to Manual**:
 Winmgmt | Windows Management Instrumentation | Occasionally used for some apps that fetch sensor data like CPU-Z and for installing *.wmi package files.
